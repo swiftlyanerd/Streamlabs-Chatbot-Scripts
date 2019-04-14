@@ -7,9 +7,10 @@ import codecs
 
 ScriptName = "Dice Minigame"
 Website = "http://www.github.com/Bare7a/Streamlabs-Chatbot-Scripts"
+Fork = "http://www.github.com/swiftlyanerd/Streamlabs-Chatbot-Scripts"
 Description = "Dice Minigame for Streamlabs Bot"
-Creator = "Bare7a"
-Version = "1.2.8"
+Creator = "Bare7a, swiftlyanerd"
+Version = "1.3.0"
 
 configFile = "config.json"
 settings = {}
@@ -30,21 +31,21 @@ def Init():
 			"command": "!dice",
 			"permission": "Everyone",
 			"useCustomCosts" : True,
-			"costs": 1,
+			"costs": 100,
 			"reward1": 2,
-			"reward2": 3,
-			"reward3": 4,
-			"reward4": 5,
-			"reward5": 100,
+			"reward2": 5,
+			"reward3": 10,
+			"reward4": 25,
+			"reward5": 50,
 			"useCooldown": True,
 			"useCooldownMessages": True,
 			"cooldown": 1,
 			"onCooldown": "$user, $command is still on cooldown for $cd minutes!",
 			"userCooldown": 300,
 			"onUserCooldown": "$user, $command is still on user cooldown for $cd minutes!",
-			"responseNotEnoughPoints": "$user you have only $points $currency to roll the dices.",
-			"responseWon": "$user rolls the dices $dices and wins $reward $currency",
-			"responseLost": "$user rolls the dices $dices and looses $cost $currency"
+			"responseNotEnoughPoints": "$user, you don't have enough points ($cost) to roll the die.",
+			"responseWon": "$user rolls the die $dices and wins $reward $currency",
+			"responseLost": "$user rolls the die $dices and loses $cost $currency"
 		}
 
 def Execute(data):
