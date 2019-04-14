@@ -7,9 +7,10 @@ import codecs
 
 ScriptName = "Slots Minigame"
 Website = "http://www.github.com/Bare7a/Streamlabs-Chatbot-Scripts"
-Description = "Slots Minigame game for Streamlabs Bot"
-Creator = "Bare7a"
-Version = "1.2.8"
+Fork = "https://github.com/swiftlyanerd/Streamlabs-Chatbot-Scripts"
+Description = "Slots Minigame for Streamlabs ChatBot"
+Creator = "Bare7a, swiftlyanerd"
+Version = "1.3.0"
 
 configFile = "config.json"
 settings = {}
@@ -32,25 +33,25 @@ def Init():
 			"command": "!slots",
 			"permission": "Everyone",
 			"useCustomCosts" : True,
-			"costs": 1,
+			"costs": 100,
 			"rewardTwoSeperated": 2,
-			"rewardTwoSame": 4,
-			"rewardJackpot": 25,
-			"rewardSuperJackpot": 75,
-			"emoteList": "HSWP, TwitchRPG, MorphinTime, duDudu, HumbleLife, PJSalt",
-			"superEmote": "CurseLit",
-			"responseLost": "$user pulls the lever [$slots] and looses $cost $currency LUL",
-			"responseWonSmall": "$user pulls the lever [ $slots ] and wins (x$multiplier) $reward $currency! PogChamp",
-			"responseWon": "$user pulls the lever [$slots] and wins (x$multiplier) $reward $currency! Kreygasm",
-			"responseJackpot": "$user pulls the lever [$slots] and hits the Jackpot (x$multiplier) $reward $currency! Kappa",
-			"responseSuperJackpot": "$user pulls the lever [$slots] and hits the SUPER JACKPOT (x$multiplier) $reward $currency! KappaPride",
+			"rewardTwoSame": 5,
+			"rewardJackpot": 10,
+			"rewardSuperJackpot": 50,
+			"emoteList": "Kappa, OpieOP, OSFrog, TriHard, PogChamp, FrankerZ",
+			"superEmote": "Kreygasm",
+			"responseLost": "$user pulls the lever [$slots] and loses $cost $currency LUL",
+			"responseWonSmall": "$user pulls the lever [$slots] and wins $reward $currency! Kappa",
+			"responseWon": "$user pulls the lever [$slots] and wins $reward $currency! PogChamp",
+			"responseJackpot": "$user pulls the lever [$slots] and hits the Jackpot, winning $reward $currency! Kreygasm",
+			"responseSuperJackpot": "$user pulls the lever [$slots] and hits the SUPER JACKPOT, winning $reward $currency! Kreygasm Kreygasm Kreygasm",
 			"useCooldown": True,
 			"useCooldownMessages": True,
 			"cooldown": 1,
 			"onCooldown": "$user, $command is still on cooldown for $cd minutes!",
 			"userCooldown": 300,
 			"onUserCooldown": "$user, $command is still on user cooldown for $cd minutes!",
-			"responseNotEnoughPoints": "$user you have only $points $currency to pull the lever."
+			"responseNotEnoughPoints": "$user, you don't have enough $currency ($cost) to pull the lever."
 		}
 
 	emotes = settings["emoteList"].replace(" ","").split(",")
